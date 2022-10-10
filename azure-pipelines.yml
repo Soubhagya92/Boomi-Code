@@ -27,8 +27,8 @@ parameters:
 
 steps:
 - script: echo "Below are the details of the process to be deployed"
-      \n ${{parameters.ObjectName}}
-      \n ${{parameters.ProcessID}}
-      \n ${{parameters.TargetEnv}}
-      \n ${{parameters.ObjectVersion}}
+      '\n' ${{parameters.ObjectName}}
+      '\n' ${{parameters.ProcessID}}
+      '\n' ${{parameters.TargetEnv}}
+      '\n' ${{parameters.ObjectVersion}}
   displayName: 'Automating Deployment in Boomi'
