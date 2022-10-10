@@ -26,9 +26,9 @@ parameters:
     type: string
 
 steps:
-- script: echo "Below are the details of the process to be deployed\n"
-          ${{parameters.ObjectName}}
-          ${{parameters.ProcessID}}
-          ${{parameters.TargetEnv}}
-          ${{parameters.ObjectVersion}}
+- script: echo "Below are the details of the process to be deployed"
+          echo ${{parameters.ObjectName}}
+          echo ${{parameters.ProcessID}}
+          echo ${{parameters.TargetEnv}}
+          echo ${{parameters.ObjectVersion}}
   displayName: 'Automating Deployment in Boomi'
