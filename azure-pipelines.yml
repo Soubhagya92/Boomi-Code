@@ -11,11 +11,24 @@ pr: none
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+parameters:
+  - name: ObjectName
+    displayName: Enter the process name to be deployed
+    type: string
+  - name: ProcessID
+    displayName: Enter the processID to be deployed
+    type: string
+  - name: TargetEnv
+    displayName: Enter the target Environment
+    type: string
+  - name: ObjectVersion
+    displayName: Enter the version of the package
+    type: string
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+steps:
+- script: echo "Below are the details of the process to be deployed"
+          ${{parameters.ObjectName}}
+          ${{parameters.ProcessID}}
+          ${{parameters.TargetEnv}}
+          ${{parameters.ObjectVersion}}
+  displayName: 'Automating Deployment in Boomi'
