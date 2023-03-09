@@ -12,5 +12,5 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo "Trigerring pipeline from Boomi Bot framework for performing deployment !"
-  displayName: 'Automating Deployment in Boomi'
+- script: echo "Trigerring pipeline from Boomi Bot framework for performing deployment."
+  displayName: 'Automating Deployment in Boomi !'
