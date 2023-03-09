@@ -11,24 +11,6 @@ pr: none
 pool:
   vmImage: ubuntu-latest
 
-parameters:
-  - name: ObjectName
-    displayName: Enter the process name to be deployed
-    type: string
-  - name: ProcessID
-    displayName: Enter the processID to be deployed
-    type: string
-  - name: TargetEnv
-    displayName: Enter the target Environment
-    type: string
-  - name: ObjectVersion
-    displayName: Enter the version of the package
-    type: string
-
 steps:
-- script: echo "Below are the details of the process to be deployed"
-           ${{parameters.ObjectName}}
-           ${{parameters.ProcessID}}
-           ${{parameters.TargetEnv}}
-           ${{parameters.ObjectVersion}}
+- script: echo "Trigerring pipeline from Boomi Bot framework for performing deployment !"
   displayName: 'Automating Deployment in Boomi'
