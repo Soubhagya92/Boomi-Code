@@ -10,7 +10,12 @@ pr: none
 
 pool:
   vmImage: ubuntu-latest
+  
+parameters:
+- name: ProcessName
+  displayName: Enter the process name ?
+  type: string
 
 steps:
-- script: echo "Trigerring pipeline from Boomi Bot framework for performing deployment."
+- script: echo ${{parameters.ProcessName}} "is the process to be deployed in Boomi."
   displayName: 'Automating Deployment in Boomi !'
