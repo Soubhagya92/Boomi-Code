@@ -15,7 +15,28 @@ parameters:
 - name: ProcessName
   displayName: Enter the process name ?
   type: string
+- name: ProcessID
+  displayName: Enter the process name ?
+  type: string
+- name: ProcessVersion
+  displayName: Enter the process name ?
+  type: string
+- name: DeployNotes
+  displayName: Enter the process name ?
+  type: string
+- name: TargetEnv_P
+  displayName: Enter the process name ?
+  type: string
+- name: TargetEnv_T
+  displayName: Enter the process name ?
+  type: string
 
 steps:
-- script: echo ${{parameters.ProcessName}} "is the process to be deployed in Boomi."
+- script: echo -e "Below is the details of the process that is to be deployed.\n"
+          echo ${{parameters.ProcessName}} $'\n'
+          echo ${{parameters.ProcessID}} $'\n'
+          echo ${{parameters.ProcessVersion}} $'\n'
+          echo ${{parameters.DeployNotes}} $'\n'
+          echo ${{parameters.TargetEnv_P}} $'\n'
+          echo ${{parameters.TargetEnv_T}} $'\n'
   displayName: 'Automating Deployment in Boomi !'
