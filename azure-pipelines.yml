@@ -33,10 +33,10 @@ parameters:
 
 steps:
 - script: echo -e "Below is the details of the process that is to be deployed.\n"
-          echo ${{parameters.ProcessName}} $'\n'
-          echo ${{parameters.ProcessID}} $'\n'
-          echo ${{parameters.ProcessVersion}} $'\n'
-          echo ${{parameters.DeployNotes}} $'\n'
-          echo ${{parameters.TargetEnv_P}} $'\n'
-          echo ${{parameters.TargetEnv_T}} $'\n'
+          ${{parameters.ProcessName}} $'\n'
+          ${{parameters.ProcessID}} $'\n'
+          ${{parameters.ProcessVersion}} $'\n'
+          ${{parameters.DeployNotes}} $'\n'
+          ${{parameters.TargetEnv_P}} $'\n'
+          ${{parameters.TargetEnv_T}} $'\n'
   displayName: 'Automating Deployment in Boomi !'
